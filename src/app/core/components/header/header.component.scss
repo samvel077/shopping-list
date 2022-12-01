@@ -1,0 +1,41 @@
+@import "variables";
+
+.header {
+  background-color: $light-blue;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &-wrapper {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+
+    mat-icon {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+  }
+
+  &-actions {
+    button {
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      mat-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+}

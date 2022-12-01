@@ -1,0 +1,35 @@
+<div class="product-details">
+  <div class="container">
+    <ng-container *ngIf="product">
+      <mat-card>
+        <div class="product-details-wrapper">
+          <div class="product-details-image">
+            <img
+              [src]="'assets/images/' + product.filename"
+              [alt]="product.title"
+            />
+          </div>
+          <div class="product-details-info">
+            <div class="product-details-header">
+              <div class="product-details-name">{{ product.title }}</div>
+              <div class="product-details-price">{{ product.price }}$</div>
+            </div>
+            <div class="product-details-description">
+              {{ product.description }}
+            </div>
+            <div class="product-details-counter">
+              <app-counter-input
+                [value]="product.count"
+                (valueChange)="onCounterVlaueChange($event)"
+              ></app-counter-input>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </ng-container>
+  </div>
+
+  <div class="back" [routerLink]="['shopping-list']">
+    <mat-icon>arrow_back</mat-icon>
+  </div>
+</div>

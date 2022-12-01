@@ -1,0 +1,20 @@
+<div class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <mat-icon> list_alt</mat-icon> Shopping List
+      </div>
+      <div class="header-actions">
+        <button
+          *ngIf="authService.isLogedIn"
+          mat-raised-button
+          (click)="onLogout()"
+        >
+          <div class="button-wrapper">
+            Logout <mat-icon>person_outline</mat-icon>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

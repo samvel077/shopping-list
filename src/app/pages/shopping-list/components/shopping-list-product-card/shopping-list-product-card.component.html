@@ -1,0 +1,14 @@
+<div class="product-card">
+  <div class="product-card-wrapper">
+    <div class="product-card-image">
+      <img [src]="'assets/images/' + product.filename" [alt]="product.title" />
+    </div>
+    <div class="product-card-info">
+      <div class="product-card-info__name">
+        {{ product.title }}
+        <span class="product-card-info__price">{{ product.price }}$</span>
+      </div>
+    </div>
+    <div class="product-card-rating">{{ product.rating }}</div>
+  </div>
+</div>
